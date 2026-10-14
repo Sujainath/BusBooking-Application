@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | On Time Travels</title>
+
+  <link rel="stylesheet" href="admindashboard.css">
+</head>
+
+<body>
+<div class="app">
+
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-logo">OTT</div>
+            <div>
+                <div class="brand-name">ON TIME TRAVELS</div>
+                <div class="brand-subtitle">Administration Portal</div>
+            </div>
+        </div>
+
+        <div class="nav-title">Workspace</div>
+
+        <button class="nav-link active" data-section="overview">
+            <span class="nav-icon">▦</span> Dashboard
+        </button>
+
+        <button class="nav-link" data-section="bookings">
+            <span class="nav-icon">▤</span> Bookings
+        </button>
+
+        <div class="nav-title">Management</div>
+
+        <button class="nav-link" data-section="buses">
+            <span class="nav-icon">🚌</span> Bus Management
+        </button>
+
+        <button class="nav-link" data-section="schedules">
+            <span class="nav-icon">◷</span> Schedule Management
+        </button>
+
+     
+
+        <div class="sidebar-bottom">
+            <div class="admin-profile">
+                <div class="avatar">S</div>
+                <div>
+                    <div class="profile-name" id="sidebarAdminName">Sujainath</div>
+                    <div class="profile-role">Administrator</div>
+                </div>
+            </div>
+
+            <button class="logout-btn" id="logoutButton">
+                ↪ &nbsp; Logout
+            </button>
+        </div>
+    </aside>
+
+    <main class="main">
+        <header class="topbar">
+            <div>
+                <h2>Admin Dashboard</h2>
+                <p>On Time Travels / Overview</p>
+            </div>
+
+            <div class="status">
+                <span class="status-dot"></span>
+                Admin Portal
+            </div>
+        </header>
+
+        <div class="content">
+            <div class="welcome">
+                <div>
+                    <h1>Welcome back, <span id="welcomeName">Sujainath</span> 👋</h1>
+                    <p>Here is an overview of your bus booking operations.</p>
+                </div>
+
+                <button class="refresh-btn" id="refreshButton">
+                    ↻ &nbsp; Refresh Data
+                </button>
+            </div>
+
+            <div class="error-message" id="errorMessage"></div>
+
+            <section id="overviewSection">
+                <h3 class="section-label">Business Overview</h3>
+
+                <div class="stats-grid">
+                    <article class="stat-card">
+                        <div class="stat-top">
+                            <span class="stat-title">Total Bookings</span>
+                            <span class="stat-icon">🎫</span>
+                        </div>
+                        <div class="stat-value" id="totalBookings">—</div>
+                        <div class="stat-note">Booking records in the system</div>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-top">
+                            <span class="stat-title">Total Users</span>
+                            <span class="stat-icon">👥</span>
+                        </div>
+                        <div class="stat-value" id="totalUsers">—</div>
+                        <div class="stat-note">Registered customer accounts</div>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-top">
+                            <span class="stat-title">Total Buses</span>
+                            <span class="stat-icon">🚌</span>
+                        </div>
+                        <div class="stat-value" id="totalBuses">—</div>
+                        <div class="stat-note">Buses registered in the system</div>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-top">
+                            <span class="stat-title">Total Revenue</span>
+                            <span class="stat-icon">₹</span>
+                        </div>
+                        <div class="stat-value" id="totalRevenue">—</div>
+                        <div class="stat-note">Revenue reported by the backend</div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="panel" id="quickActionsPanel">
+                <div class="panel-header">
+                    <div>
+                        <h3>Management Centre</h3>
+                        <p>Choose an area to manage.</p>
+                    </div>
+                </div>
+
+                <div class="panel-body">
+                    <div class="quick-grid">
+                        <button class="quick-card" data-section="bookings">
+                            <span class="quick-icon">🎫</span>
+                            <span>
+                                <strong>Bookings</strong>
+                                <small>View and review customer bookings</small>
+                            </span>
+                        </button>
+
+                        <button class="quick-card" data-section="buses">
+                            <span class="quick-icon">🚌</span>
+                            <span>
+                                <strong>Bus Management</strong>
+                                <small>Manage bus information</small>
+                            </span>
+                        </button>
+
+                        <button class="quick-card" data-section="schedules">
+                            <span class="quick-icon">🗓️</span>
+                            <span>
+                                <strong>Schedule Management</strong>
+                                <small>Manage routes and departure schedules</small>
+                            </span>
+                        </button>
+
+                      
+
+                        <button class="quick-card" data-section="overview">
+                            <span class="quick-icon">📊</span>
+                            <span>
+                                <strong>Dashboard Overview</strong>
+                                <small>Return to business summary</small>
+                            </span>
+                        </button>
+
+                        <button class="quick-card" id="quickRefreshButton">
+                            <span class="quick-icon">↻</span>
+                            <span>
+                                <strong>Refresh Summary</strong>
+                                <small>Load the latest summary from the backend</small>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel" id="detailsPanel">
+                <div class="panel-header">
+                    <div>
+                        <h3 id="detailsTitle">Recent Bookings</h3>
+                        <p id="detailsSubtitle">Booking details will appear here when connected.</p>
+                    </div>
+                </div>
+
+                <div id="detailsContent">
+                    <div class="notice">
+                        The dashboard summary is loaded from the backend.
+                        Detailed booking and management lists need their respective API endpoints.
+                    </div>
+
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>Booking Reference</th>
+                                <th>Customer</th>
+                                <th>Route</th>
+                                <th>Travel Date</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td colspan="6" class="empty-state">
+                                    Booking list API connection will be added in the next step.
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <div class="footer">
+                © <span id="currentYear"></span> On Time Travels · Admin Portal
+            </div>
+        </div>
+    </main>
+</div>
+
+<script src="admindashboard.js"></script>
+</body>
+</html>

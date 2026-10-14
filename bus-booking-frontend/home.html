@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>On Time Travels - Home</title>
+
+    <link
+        rel="stylesheet"
+        href="home.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header class="header">
+
+    <div class="brand">
+
+        <div class="brand-logo">
+            OTT
+        </div>
+
+        <div class="brand-name">
+            ON TIME TRAVELS
+        </div>
+
+    </div>
+
+
+    <nav class="nav">
+
+        <a href="home.html" class="active">
+            Home
+        </a>
+
+        <a href="my-bookings.html">
+            My Bookings
+        </a>
+
+        <button
+            type="button"
+            id="logoutBtn"
+            class="logout-btn"
+        >
+            Logout
+        </button>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<main>
+
+
+<section class="hero">
+
+
+    <div class="hero-content">
+
+
+        <span class="hero-label">
+            TRAVEL WITH CONFIDENCE
+        </span>
+
+
+        <h1>
+            Your journey starts<br>
+            with <span>On Time Travels.</span>
+        </h1>
+
+
+        <p>
+            Book comfortable AC sleeper and seater buses
+            across South India with simple and reliable booking.
+        </p>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================
+     SEARCH CARD
+========================================= -->
+
+<section class="search-section">
+
+
+    <div class="search-card">
+
+
+        <div class="search-heading">
+
+            <span>
+                BUS SEARCH
+            </span>
+
+            <h2>
+                Where do you want to go?
+            </h2>
+
+        </div>
+
+
+
+        <!-- FROM -->
+
+        <div class="field">
+
+            <label for="fromCity">
+                FROM
+            </label>
+
+
+            <select id="fromCity">
+
+                <option value="">
+                    Select departure city
+                </option>
+
+                <option value="Bangalore">
+                    Bangalore
+                </option>
+
+                <option value="Chennai">
+                    Chennai
+                </option>
+
+                <option value="Kochi">
+                    Kochi
+                </option>
+
+                <option value="Madurai">
+                    Madurai
+                </option>
+
+                <option value="Coimbatore">
+                    Coimbatore
+                </option>
+
+            </select>
+
+        </div>
+
+
+
+        <!-- SWAP -->
+
+        <button
+            type="button"
+            id="swapBtn"
+            class="swap-btn"
+            title="Swap cities"
+        >
+            ⇄
+        </button>
+
+
+
+        <!-- TO -->
+
+        <div class="field">
+
+            <label for="toCity">
+                TO
+            </label>
+
+
+            <select id="toCity">
+
+                <option value="">
+                    Select destination city
+                </option>
+
+                <option value="Bangalore">
+                    Bangalore
+                </option>
+
+                <option value="Chennai">
+                    Chennai
+                </option>
+
+                <option value="Kochi">
+                    Kochi
+                </option>
+
+                <option value="Madurai">
+                    Madurai
+                </option>
+
+                <option value="Coimbatore">
+                    Coimbatore
+                </option>
+
+            </select>
+
+        </div>
+
+
+
+        <!-- DATE -->
+
+        <div class="field">
+
+            <label for="travelDate">
+                TRAVEL DATE
+            </label>
+
+
+            <input
+                type="date"
+                id="travelDate"
+            >
+
+        </div>
+
+
+
+        <!-- SEARCH -->
+
+        <button
+            type="button"
+            id="searchBtn"
+            class="search-btn"
+        >
+
+            Search Buses
+
+            <span>
+                →
+            </span>
+
+        </button>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================
+     SEARCH RESULTS
+========================================= -->
+
+<section
+    id="resultsSection"
+    class="results-section hidden"
+>
+
+
+    <div class="results-heading">
+
+        <div>
+
+            <span>
+                AVAILABLE BUSES
+            </span>
+
+            <h2>
+                Choose your bus
+            </h2>
+
+        </div>
+
+
+        <div
+            id="resultRoute"
+            class="result-route"
+        >
+        </div>
+
+    </div>
+
+
+
+    <div
+        id="busResults"
+        class="bus-results"
+    >
+    </div>
+
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================================
+     POPUP
+========================================= -->
+
+<div
+    id="popup"
+    class="popup"
+>
+
+    <span id="popupMessage"></span>
+
+</div>
+
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
+<script src="home.js"></script>
+
+
+</body>
+
+</html>

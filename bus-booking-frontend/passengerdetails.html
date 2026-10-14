@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Passenger Details - On Time Travels</title>
+
+    <link
+        rel="stylesheet"
+        href="passengerdetails.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header class="header">
+
+    <div class="brand">
+
+        <div class="brand-logo">
+            OTT
+        </div>
+
+        <div class="brand-name">
+            ON TIME TRAVELS
+        </div>
+
+    </div>
+
+
+    <button
+        type="button"
+        id="backBtn"
+        class="back-btn"
+    >
+        ← Back to Seats
+    </button>
+
+</header>
+
+
+
+<main class="page">
+
+
+    <!-- JOURNEY INFORMATION -->
+
+    <section class="journey-card">
+
+        <div>
+
+            <span class="small-label">
+                PASSENGER DETAILS
+            </span>
+
+            <h1>
+                Enter passenger information
+            </h1>
+
+            <p id="journeyText">
+                Loading journey details...
+            </p>
+
+        </div>
+
+
+        <div class="seat-count-box">
+
+            <span>
+                SELECTED SEATS
+            </span>
+
+            <strong id="seatCount">
+                0
+            </strong>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- PASSENGER FORMS -->
+
+    <section class="passenger-section">
+
+
+        <div class="section-title">
+
+            <span>
+                BOOKING DETAILS
+            </span>
+
+            <h2>
+                Passenger information
+            </h2>
+
+        </div>
+
+
+        <form id="passengerForm">
+
+            <div
+                id="passengerList"
+                class="passenger-list"
+            >
+            </div>
+
+
+            <div class="bottom-area">
+
+                <div class="fare-box">
+
+                    <span>
+                        Total fare
+                    </span>
+
+                    <strong id="totalFare">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    id="continuePaymentBtn"
+                    class="continue-btn"
+                >
+                    Continue to Payment
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+</main>
+
+
+
+<!-- POPUP -->
+
+<div
+    id="popup"
+    class="popup"
+>
+
+    <span id="popupMessage"></span>
+
+</div>
+
+
+
+<script src="passengerdetails.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Payment - On Time Travels</title>
+
+    <link
+        rel="stylesheet"
+        href="payment.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<header class="header">
+
+    <div class="brand">
+
+        <div class="brand-logo">
+            OTT
+        </div>
+
+        <div class="brand-name">
+            ON TIME TRAVELS
+        </div>
+
+    </div>
+
+
+    <button
+        type="button"
+        id="backBtn"
+        class="back-btn"
+    >
+        ← Back
+    </button>
+
+</header>
+
+
+
+<main class="page">
+
+
+    <!-- PAGE HEADING -->
+
+    <section class="page-heading">
+
+        <span>
+            PAYMENT
+        </span>
+
+        <h1>
+            Complete your booking
+        </h1>
+
+        <p>
+            Review your booking details and make the payment.
+        </p>
+
+    </section>
+
+
+
+    <!-- PAYMENT CONTENT -->
+
+    <section class="payment-layout">
+
+
+        <!-- BOOKING SUMMARY -->
+
+        <div class="booking-card">
+
+            <div class="card-heading">
+
+                <span>
+                    BOOKING SUMMARY
+                </span>
+
+                <h2>
+                    Your journey
+                </h2>
+
+            </div>
+
+
+            <div class="journey-row">
+
+                <div>
+
+                    <small>
+                        FROM
+                    </small>
+
+                    <strong id="source">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="arrow">
+                    →
+                </div>
+
+
+                <div>
+
+                    <small>
+                        TO
+                    </small>
+
+                    <strong id="destination">
+                        —
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="details">
+
+                <div>
+                    <span>Travel Date</span>
+                    <strong id="travelDate">—</strong>
+                </div>
+
+                <div>
+                    <span>Seats</span>
+                    <strong id="selectedSeats">—</strong>
+                </div>
+
+            </div>
+
+
+            <div class="fare-row">
+
+                <span>
+                    Total Amount
+                </span>
+
+                <strong id="totalAmount">
+                    ₹0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PAYMENT CARD -->
+
+        <div class="payment-card">
+
+            <div class="card-heading">
+
+                <span>
+                    PAYMENT METHOD
+                </span>
+
+                <h2>
+                    Pay securely
+                </h2>
+
+            </div>
+
+
+            <div class="payment-option">
+
+                <div class="payment-icon">
+                    ₹
+                </div>
+
+                <div>
+
+                    <strong>
+                        Online Payment
+                    </strong>
+
+                    <p>
+                        Secure simulated payment
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="payment-note">
+
+                <span>
+                    PAYMENT INFORMATION
+                </span>
+
+                <p>
+                    This is a simulated payment for the project.
+                    No real money will be charged.
+                </p>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="payNowBtn"
+                class="pay-btn"
+            >
+                Pay Now
+                <span>→</span>
+            </button>
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- PAYMENT PROCESSING POPUP -->
+
+<div
+    id="paymentPopup"
+    class="payment-popup"
+>
+
+    <div class="loader"></div>
+
+    <div>
+
+        <strong id="paymentPopupTitle">
+            Processing payment
+        </strong>
+
+        <p id="paymentPopupMessage">
+            Please wait...
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<script src="payment.js"></script>
+
+</body>
+
+</html>

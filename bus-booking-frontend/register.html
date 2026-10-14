@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Create Account | On Time Travels</title>
+
+    <!-- SAME LOGIN CSS -->
+    <link
+        rel="stylesheet"
+        href="login.css"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="login-page">
+
+
+        <!-- =================================================
+             LEFT BRANDING
+             Same as Login Page
+             ================================================= -->
+
+        <section class="login-brand">
+
+            <div class="brand-content">
+
+                <div class="brand-logo">
+                    OTT
+                </div>
+
+                <p class="brand-name">
+                    ON TIME TRAVELS
+                </p>
+
+                <h1>
+                    Start your<br>
+                    journey with us.
+                </h1>
+
+                <p class="brand-description">
+                    Create your account and book
+                    comfortable AC sleeper and seater
+                    buses across South India.
+                </p>
+
+                <div class="route-line">
+
+                    <span>Bangalore</span>
+
+                    <span class="line"></span>
+
+                    <span>Chennai</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             REGISTER SECTION
+             ================================================= -->
+
+        <section class="login-section">
+
+            <div class="login-card register-card">
+
+
+                <!-- Header -->
+
+                <div class="login-header">
+
+                    <p class="welcome-text">
+                        NEW TRAVELLER
+                    </p>
+
+                    <h2>
+                        Create your account
+                    </h2>
+
+                    <p>
+                        Register once and make your bookings easier.
+                    </p>
+
+                </div>
+
+
+                <!-- Register Form -->
+
+                <form
+                    id="registerForm"
+                    class="register-form"
+                >
+
+
+                    <!-- Full Name -->
+
+                    <div class="form-group">
+
+                        <label for="fullName">
+                            Full name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="fullName"
+                            placeholder="Enter your full name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Email + Phone -->
+
+                    <div class="register-row">
+
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Enter your email"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="phone">
+                                Phone number
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                placeholder="10-digit number"
+                                maxlength="10"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Gender -->
+
+                    <div class="form-group">
+
+                        <label for="gender">
+                            Gender
+                        </label>
+
+                        <select
+                            id="gender"
+                            required
+                        >
+
+                            <option value="">
+                                Select gender
+                            </option>
+
+                            <option value="MALE">
+                                Male
+                            </option>
+
+                            <option value="FEMALE">
+                                Female
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Password + Confirm Password -->
+
+                    <div class="register-row">
+
+
+                        <div class="form-group">
+
+                            <label for="password">
+                                Password
+                            </label>
+
+                            <input
+                                type="password"
+                                id="password"
+                                placeholder="Create password"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="confirmPassword">
+                                Confirm password
+                            </label>
+
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                placeholder="Confirm password"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Create Account -->
+
+                    <button
+                        type="submit"
+                        class="login-btn"
+                    >
+                        Create Account
+                    </button>
+
+                </form>
+
+
+                <!-- =================================================
+                     ACCOUNT SWITCH
+                     LOGIN -> REGISTER
+                     REGISTER -> LOGIN
+                     ================================================= -->
+
+                <div class="divider">
+                    <span>OR</span>
+                </div>
+
+
+                <p class="account-switch register-text">
+
+                    Already have an account?
+
+                    <a href="index.html">
+                        Sign in
+                    </a>
+
+                </p>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Popup -->
+
+    <div
+        id="popup"
+        class="popup"
+    >
+
+        <div class="popup-content">
+
+            <span id="popupMessage"></span>
+
+            <button
+                type="button"
+                id="popupClose"
+            >
+                ×
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="register.js"></script>
+
+</body>
+
+</html>

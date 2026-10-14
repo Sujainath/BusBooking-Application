@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Choose Seats - On Time Travels</title>
+
+    <link
+        rel="stylesheet"
+        href="seats.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<header class="header">
+
+    <div class="brand">
+
+        <div class="brand-logo">
+            OTT
+        </div>
+
+        <div class="brand-name">
+            ON TIME TRAVELS
+        </div>
+
+    </div>
+
+
+    <button
+        type="button"
+        id="backBtn"
+        class="back-btn"
+    >
+        ← Back
+    </button>
+
+</header>
+
+
+
+<main class="container">
+
+
+    <!-- JOURNEY INFO -->
+
+    <section class="journey-card">
+
+        <div class="journey-info">
+
+            <span>YOUR JOURNEY</span>
+
+            <h1 id="routeName">
+                Bangalore → Chennai
+            </h1>
+
+            <p id="travelDateText">
+                Select your seats for this journey
+            </p>
+
+        </div>
+
+
+        <div class="bus-info">
+
+            <strong id="busNumber">
+                OT001
+            </strong>
+
+            <span id="busType">
+                AC Sleeper/Seater
+            </span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- SEAT SECTION -->
+
+    <section class="seat-section">
+
+
+        <div class="section-heading">
+
+            <div>
+
+                <span>
+                    BUS LAYOUT
+                </span>
+
+                <h2>
+                    Choose your seats
+                </h2>
+
+            </div>
+
+
+            <!-- SEAT LEGEND -->
+
+            <div class="seat-legend">
+
+                <!-- AVAILABLE -->
+
+                <div>
+                    <span class="legend available"></span>
+                    <span>Available</span>
+                </div>
+
+
+                <!-- BOOKED -->
+
+                <div>
+                    <span class="legend booked"></span>
+                    <span>Booked</span>
+                </div>
+
+
+                <!-- FEMALE PASSENGER -->
+
+                <div>
+                    <span class="legend female"></span>
+                    <span>Female passenger</span>
+                </div>
+
+
+                <!-- SELECTED -->
+
+                <div>
+                    <span class="legend selected"></span>
+                    <span>Selected</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- VIEW BUTTON -->
+
+        <div
+            id="seatPlaceholder"
+            class="seat-placeholder"
+        >
+
+            <div class="chair-icon">
+                🪑
+            </div>
+
+            <h3>
+                View your seat layout
+            </h3>
+
+            <p>
+                Check available and booked seats before booking.
+            </p>
+
+            <button
+                type="button"
+                id="viewSeatBtn"
+            >
+                View Seat Layout
+                <span>→</span>
+            </button>
+
+        </div>
+
+
+
+        <!-- ACTUAL LAYOUT -->
+
+        <div
+            id="seatLayout"
+            class="seat-layout hidden"
+        >
+
+
+            <!-- LOWER DECK -->
+
+            <div class="deck">
+
+                <div class="deck-top">
+
+                    <h3>
+                        Lower deck
+                    </h3>
+
+                    <div class="wheel"></div>
+
+                </div>
+
+
+                <div class="deck-body lower">
+
+                    <!-- LOWER SINGLE SLEEPERS -->
+
+                    <div
+                        id="lowerSleeperSeats"
+                        class="sleepers"
+                    ></div>
+
+
+                    <!-- LOWER SEATERS -->
+
+                    <div
+                        id="lowerSeaterSeats"
+                        class="seats"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- UPPER DECK -->
+
+            <div class="deck">
+
+                <div class="deck-top">
+
+                    <h3>
+                        Upper deck
+                    </h3>
+
+                </div>
+
+
+                <div class="deck-body upper">
+
+                    <!-- UPPER SINGLE SLEEPERS -->
+
+                    <div
+                        id="upperSleeperSeats"
+                        class="sleepers"
+                    ></div>
+
+
+                    <!-- UPPER DOUBLE SLEEPERS -->
+
+                    <div
+                        id="upperDoubleSleeperSeats"
+                        class="double-sleepers"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- BOOKING SUMMARY -->
+
+    <section class="booking-summary">
+
+        <div>
+
+            <span>
+                SEATS
+            </span>
+
+            <strong id="selectedCount">
+                0 / 6
+            </strong>
+
+        </div>
+
+
+        <div class="selected-seat-info">
+
+            <span>
+                SELECTED SEATS
+            </span>
+
+            <p id="selectedSeats">
+                No seats selected
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <span>
+                TOTAL FARE
+            </span>
+
+            <strong id="totalFare">
+                ₹0
+            </strong>
+
+        </div>
+
+
+        <button
+            type="button"
+            id="continueBtn"
+            disabled
+        >
+            Continue →
+        </button>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- POPUP -->
+
+<div
+    id="popup"
+    class="popup"
+>
+
+    <span id="popupMessage"></span>
+
+</div>
+
+
+
+<script src="seats.js"></script>
+
+</body>
+
+</html>

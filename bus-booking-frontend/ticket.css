@@ -1,0 +1,617 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #071a33;
+    color: #162033;
+    min-height: 100vh;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    height: 76px;
+    background: #071a33;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: #ffb43b;
+    color: #071a33;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 14px;
+}
+
+.brand-name {
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.home-btn {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: transparent;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+.home-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* =========================
+   PAGE
+========================= */
+
+.page {
+    width: min(1050px, 92%);
+    margin: 0 auto;
+    padding: 45px 0 60px;
+}
+
+/* =========================
+   SUCCESS
+========================= */
+
+.success-section {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.success-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: #dff3e5;
+    color: #238348;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.success-section > span {
+    color: #238348;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.success-section h1 {
+    margin-top: 8px;
+    font-size: 32px;
+    color: #ffffff;
+}
+
+.success-section p {
+    margin-top: 10px;
+    color: #aab8ca;
+    font-size: 15px;
+}
+
+/* =========================
+   TICKET CARD
+========================= */
+
+.ticket-card {
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(7, 26, 51, 0.08);
+    overflow: hidden;
+}
+
+/* =========================
+   TICKET HEADER
+========================= */
+
+.ticket-header {
+    background: #071a33;
+    color: white;
+    padding: 28px 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ticket-header span {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #ffb43b;
+}
+
+.ticket-header h2 {
+    margin-top: 5px;
+    font-size: 24px;
+}
+
+.booking-reference {
+    text-align: right;
+}
+
+.booking-reference small {
+    display: block;
+    color: #aab5c5;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.booking-reference strong {
+    display: block;
+    margin-top: 6px;
+    color: white;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+/* =========================
+   JOURNEY
+========================= */
+
+.journey-section {
+    display: grid;
+    grid-template-columns: 1fr 130px 1fr;
+    align-items: center;
+    padding: 35px 40px;
+    border-bottom: 1px dashed #d6dce5;
+}
+
+.location small {
+    display: block;
+    color: #8a94a4;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.location strong {
+    display: block;
+    margin-top: 7px;
+    font-size: 27px;
+    color: #071a33;
+}
+
+.location span {
+    display: block;
+    margin-top: 7px;
+    color: #667085;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.destination {
+    text-align: right;
+}
+
+.journey-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ffb43b;
+}
+
+.journey-line div {
+    flex: 1;
+    height: 2px;
+    background: #d8dee7;
+}
+
+/* =========================
+   DETAILS
+========================= */
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: #e6eaf0;
+    border-bottom: 1px solid #e6eaf0;
+}
+
+.detail {
+    background: white;
+    padding: 22px;
+}
+
+.detail span {
+    display: block;
+    color: #8a94a4;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.detail strong {
+    display: block;
+    margin-top: 8px;
+    color: #1c2738;
+    font-size: 15px;
+}
+
+.status {
+    color: #238348 !important;
+}
+
+/* =========================
+   PASSENGERS
+========================= */
+
+.passenger-section {
+    padding: 30px 34px;
+    border-bottom: 1px solid #e6eaf0;
+}
+
+.section-title > span {
+    color: #8a94a4;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+}
+
+.section-title h3 {
+    margin-top: 6px;
+    font-size: 20px;
+    color: #071a33;
+}
+
+.passenger-list {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.passenger-row {
+    display: grid;
+    grid-template-columns: 50px 1fr 120px 100px;
+    align-items: center;
+    gap: 15px;
+    padding: 14px 16px;
+    background: #f7f9fc;
+    border-radius: 10px;
+}
+
+.passenger-number {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #e9eef5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    color: #071a33;
+}
+
+.passenger-info span,
+.passenger-seat span,
+.passenger-gender span {
+    display: block;
+    color: #8a94a4;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+}
+
+.passenger-info strong,
+.passenger-seat strong,
+.passenger-gender strong {
+    display: block;
+    margin-top: 4px;
+    color: #1c2738;
+    font-size: 14px;
+}
+
+.passenger-seat {
+    text-align: center;
+}
+
+.passenger-gender {
+    text-align: right;
+}
+
+/* =========================
+   FARE
+========================= */
+
+.fare-section {
+    padding: 25px 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e6eaf0;
+}
+
+.fare-section > div > span {
+    display: block;
+    color: #8a94a4;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.fare-section > div > strong {
+    display: block;
+    margin-top: 7px;
+    color: #1c2738;
+    font-size: 15px;
+}
+
+.total-fare {
+    text-align: right;
+}
+
+.total-fare strong {
+    font-size: 24px !important;
+    color: #071a33 !important;
+}
+
+/* =========================
+   PAYMENT
+========================= */
+
+.payment-section {
+    padding: 22px 34px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    border-bottom: 1px solid #e6eaf0;
+}
+
+.payment-section > div span {
+    display: block;
+    color: #8a94a4;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.payment-section > div strong {
+    display: block;
+    margin-top: 6px;
+    font-size: 14px;
+}
+
+.payment-success {
+    color: #238348;
+}
+
+/* =========================
+   CANCELLATION
+========================= */
+
+.cancellation-note {
+    margin: 24px 34px;
+    padding: 17px 19px;
+    background: #fff8e9;
+    border-left: 4px solid #ffb43b;
+    border-radius: 8px;
+}
+
+.cancellation-note strong {
+    display: block;
+    color: #7a5310;
+    font-size: 14px;
+}
+
+.cancellation-note p {
+    margin-top: 6px;
+    color: #735f36;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.ticket-footer {
+    padding: 22px 34px 28px;
+    text-align: center;
+    color: #8a94a4;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.ticket-footer strong {
+    color: #071a33;
+}
+
+/* =========================
+   ACTIONS
+========================= */
+
+.ticket-actions {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.ticket-actions button {
+    border: none;
+    border-radius: 9px;
+    padding: 13px 24px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.primary-btn {
+    background: #ffb43b;
+    color: #071a33;
+}
+
+.primary-btn:hover {
+    background: #f2a51f;
+}
+
+.cancel-btn {
+    background: #f2c4c4;
+    color: #8c2525;
+}
+
+.cancel-btn:hover {
+    background: #e9b0b0;
+}
+
+/* =========================
+   POPUP
+========================= */
+
+.popup {
+    position: fixed;
+    left: 50%;
+    bottom: 30px;
+    transform: translate(-50%, 120px);
+    background: #071a33;
+    color: white;
+    padding: 14px 22px;
+    border-radius: 9px;
+    font-size: 14px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+    z-index: 1000;
+}
+
+.popup.show {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    .header {
+        padding: 0 4%;
+    }
+
+    .page {
+        width: 94%;
+        padding-top: 30px;
+    }
+
+    .success-section h1 {
+        font-size: 26px;
+    }
+
+    .ticket-header {
+        padding: 24px;
+    }
+
+    .journey-section {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 28px 24px;
+    }
+
+    .destination {
+        text-align: left;
+    }
+
+    .journey-line {
+        width: 100%;
+    }
+
+    .details-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .passenger-section,
+    .fare-section,
+    .payment-section {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .passenger-row {
+        grid-template-columns: 40px 1fr 90px;
+    }
+
+    .passenger-gender {
+        display: none;
+    }
+
+    .cancellation-note {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+}
+
+@media (max-width: 520px) {
+
+    .brand-name {
+        font-size: 12px;
+    }
+
+    .home-btn {
+        padding: 8px 12px;
+    }
+
+    .ticket-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .booking-reference {
+        text-align: left;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fare-section,
+    .payment-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .total-fare {
+        text-align: left;
+    }
+
+    .ticket-actions {
+        flex-direction: column;
+    }
+
+    .ticket-actions button {
+        width: 100%;
+    }
+}

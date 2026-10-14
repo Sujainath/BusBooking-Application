@@ -1,0 +1,911 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #071525;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    height: 72px;
+    padding: 0 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #071525;
+    border-bottom: 1px solid #1c3148;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-logo {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #ffb43b;
+    border-radius: 9px;
+
+    color: #ffb43b;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.brand-name {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.back-btn {
+    border: 1px solid #2b425b;
+    background: transparent;
+
+    color: #ffffff;
+
+    padding: 9px 16px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+.back-btn:hover {
+    border-color: #ffb43b;
+    color: #ffb43b;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.container {
+    width: 84%;
+    max-width: 1100px;
+
+    margin: 35px auto 70px;
+}
+
+
+/* =========================
+   JOURNEY
+========================= */
+
+.journey-card {
+    padding: 25px 28px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #0c1c2f;
+
+    border: 1px solid #263d56;
+    border-radius: 14px;
+
+    margin-bottom: 35px;
+}
+
+.journey-info span {
+    color: #8ea6c4;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.journey-info h1 {
+    margin-top: 8px;
+
+    font-size: 28px;
+}
+
+.journey-info p {
+    margin-top: 7px;
+
+    color: #8ea6c4;
+    font-size: 13px;
+}
+
+.bus-info {
+    text-align: right;
+}
+
+.bus-info strong {
+    display: block;
+
+    font-size: 18px;
+}
+
+.bus-info span {
+    color: #8ea6c4;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   SECTION HEADING
+========================= */
+
+.section-heading {
+    margin-bottom: 20px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.section-heading span {
+    color: #8ea6c4;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.section-heading h2 {
+    margin-top: 7px;
+
+    font-size: 26px;
+}
+
+
+/* =========================
+   LEGEND
+========================= */
+
+.seat-legend {
+    display: flex;
+    gap: 20px;
+
+    color: #8ea6c4;
+
+    font-size: 12px;
+}
+
+.seat-legend div {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.legend {
+    width: 15px;
+    height: 15px;
+
+    display: inline-block;
+
+    border-radius: 4px;
+}
+
+
+/* AVAILABLE - MILD GREEN */
+
+.legend.available {
+    background: #b8e6c8;
+    border: 1px solid #80c996;
+}
+
+
+/* BOOKED - MILD RED */
+
+.legend.booked {
+    background: #efb4b4;
+    border: 1px solid #d88989;
+}
+
+
+/* SELECTED */
+
+.legend.selected {
+    background: #ffb43b;
+    border: 1px solid #ffb43b;
+}
+
+
+/* =========================
+   PLACEHOLDER
+========================= */
+
+.seat-placeholder {
+    min-height: 390px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background: #0c1c2f;
+
+    border: 1px dashed #304963;
+    border-radius: 14px;
+}
+
+.chair-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #13263b;
+
+    border-radius: 10px;
+
+    font-size: 24px;
+
+    margin-bottom: 15px;
+}
+
+.seat-placeholder h3 {
+    font-size: 19px;
+}
+
+.seat-placeholder p {
+    margin-top: 8px;
+    margin-bottom: 20px;
+
+    color: #8ea6c4;
+
+    font-size: 13px;
+}
+
+#viewSeatBtn {
+    border: none;
+
+    background: #ffb43b;
+    color: #071525;
+
+    padding: 12px 20px;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+#viewSeatBtn:hover {
+    background: #ffc45e;
+}
+
+#viewSeatBtn span {
+    margin-left: 8px;
+}
+
+
+/* =========================
+   HIDDEN
+========================= */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================
+   SEAT LAYOUT
+========================= */
+
+.seat-layout {
+    display: flex;
+    justify-content: center;
+
+    gap: 18px;
+
+    margin-top: 10px;
+}
+
+
+/* =========================
+   DECK
+========================= */
+
+.deck {
+    width: 226px;
+
+    background: #0c1c2f;
+
+    border-radius: 12px;
+
+    padding: 0 3px 3px;
+}
+
+.deck-top {
+    height: 67px;
+
+    padding: 0 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.deck-top h3 {
+    font-size: 15px;
+}
+
+
+/* =========================
+   WHEEL
+========================= */
+
+.wheel {
+    width: 30px;
+    height: 30px;
+
+    border: 4px solid #647589;
+
+    border-radius: 50%;
+
+    position: relative;
+}
+
+.wheel::after {
+    content: "";
+
+    position: absolute;
+
+    top: 7px;
+    left: 7px;
+
+    width: 8px;
+    height: 8px;
+
+    background: #647589;
+
+    border-radius: 50%;
+}
+
+
+/* =========================
+   DECK BODY
+========================= */
+
+.deck-body {
+    width: 220px;
+    height: 572px;
+
+    padding: 22px 15px 22px 19px;
+
+    display: flex;
+    justify-content: space-between;
+
+    background: #091a2d;
+
+    border: 1px solid #31465d;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+}
+
+.deck-body.upper {
+    padding-right: 49px;
+}
+
+
+/* =========================
+   SLEEPERS
+========================= */
+
+.sleepers {
+    margin-top: 88px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.sleepers .seat-box {
+    height: 88px;
+}
+
+
+/* =========================
+   SEATER GRID
+========================= */
+
+.seats {
+    display: grid;
+
+    grid-template-columns: 26px 26px;
+
+    column-gap: 14px;
+
+    grid-auto-rows: 44px;
+}
+
+
+/* =========================
+   DOUBLE SLEEPER GRID
+========================= */
+
+.double-sleepers {
+    display: grid;
+
+    grid-template-columns: 32px 32px;
+
+    column-gap: 8px;
+
+    grid-auto-rows: 88px;
+}
+
+
+/* =========================
+   SEAT BOX
+========================= */
+
+.seat-box {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.seat-box p {
+    margin-top: 3px;
+
+    color: #71849a;
+
+    font-size: 9px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   COMMON SEAT
+========================= */
+
+.seat {
+    position: relative;
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    transition: 0.15s ease;
+}
+
+
+/* =========================
+   SEATER SHAPE
+========================= */
+
+.seat.seater {
+    width: 26px;
+    height: 26px;
+
+    border: 1.5px solid #6fbd89;
+
+    border-radius: 7px;
+}
+
+.seat.seater::before {
+    content: "";
+
+    position: absolute;
+
+    top: 2px;
+    left: 4px;
+
+    width: 15px;
+    height: 11px;
+
+    border: 1.5px solid #6fbd89;
+
+    border-radius: 4px;
+}
+
+.seat.seater::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 2px;
+    left: 2px;
+
+    width: 19px;
+    height: 7px;
+
+    border: 1.5px solid #6fbd89;
+
+    border-radius: 3px;
+}
+
+
+/* =========================
+   SLEEPER SHAPE
+========================= */
+
+.seat.sleeper {
+    width: 32px;
+    height: 70px;
+
+    border: 1px solid #6fbd89;
+
+    border-radius: 4px;
+}
+
+.seat.sleeper::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 8px;
+    left: 5px;
+
+    width: 20px;
+    height: 5px;
+
+    background: #c7ead1;
+
+    border-radius: 2px;
+}
+
+
+/* =========================
+   AVAILABLE
+   MILD GREEN
+========================= */
+
+.seat.available {
+    background: #dff3e5;
+
+    border-color: #70bd88;
+}
+
+.seat.available::before {
+    border-color: #70bd88;
+}
+
+.seat.available::after {
+    border-color: #70bd88;
+}
+
+.seat.available:hover {
+    background: #c9ead3;
+
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   BOOKED
+   MILD RED
+========================= */
+
+.seat.booked {
+    background: #f2c4c4;
+
+    border-color: #d98d8d;
+
+    cursor: not-allowed;
+}
+
+.seat.booked::before {
+    border-color: #d98d8d;
+}
+
+.seat.booked::after {
+    border-color: #d98d8d;
+
+    background: #e9aaaa;
+}
+
+.seat.booked .seat-number {
+    color: #a34e4e;
+}
+
+
+/* =========================
+   SELECTED
+========================= */
+
+.seat.selected {
+    background: #ffb43b;
+
+    border-color: #ffb43b;
+}
+
+.seat.selected::before {
+    border-color: #071525;
+}
+
+.seat.selected::after {
+    border-color: #071525;
+
+    background: #ffd27d;
+}
+
+.seat.selected .seat-number {
+    color: #071525;
+}
+
+
+/* =========================
+   SEAT NUMBER
+========================= */
+
+.seat-number {
+    position: relative;
+
+    z-index: 2;
+
+    color: #39704b;
+
+    font-size: 7px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   BOOKING SUMMARY
+========================= */
+
+.booking-summary {
+    margin-top: 25px;
+
+    padding: 22px;
+
+    display: grid;
+
+    grid-template-columns:
+        150px
+        1fr
+        150px
+        180px;
+
+    align-items: center;
+
+    gap: 20px;
+
+    background: #0c1c2f;
+
+    border: 1px solid #263d56;
+
+    border-radius: 14px;
+}
+
+.booking-summary > div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.booking-summary span {
+    color: #8ea6c4;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.booking-summary strong {
+    color: #ffffff;
+
+    font-size: 17px;
+}
+
+#selectedSeats {
+    min-height: 20px;
+
+    color: #ffffff;
+
+    font-size: 13px;
+}
+
+#totalFare {
+    font-size: 21px;
+}
+
+
+/* =========================
+   CONTINUE
+========================= */
+
+#continueBtn {
+    height: 46px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #ffb43b;
+    color: #071525;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+#continueBtn:hover {
+    background: #ffc45e;
+}
+
+#continueBtn:disabled {
+    background: #394b5e;
+
+    color: #8294a8;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================
+   POPUP
+========================= */
+
+.popup {
+    position: fixed;
+
+    top: 24px;
+    right: 24px;
+
+    min-width: 280px;
+
+    padding: 14px 18px;
+
+    background: #13263b;
+
+    border: 1px solid #304963;
+
+    border-radius: 8px;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transform: translateY(-10px);
+
+    transition: 0.25s ease;
+
+    z-index: 9999;
+}
+
+.popup.show {
+    opacity: 1;
+
+    pointer-events: auto;
+
+    transform: translateY(0);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+
+    .seat-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .booking-summary {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        width: calc(100% - 30px);
+    }
+
+    .header {
+        padding: 0 18px;
+    }
+
+    .brand-name {
+        display: none;
+    }
+
+    .journey-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .bus-info {
+        text-align: left;
+    }
+
+    .section-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .seat-legend {
+        gap: 10px;
+    }
+
+    .booking-summary {
+        grid-template-columns: 1fr;
+    }
+
+    #continueBtn {
+        width: 100%;
+    }
+}
+/* =========================================
+   BOOKED PASSENGER GENDER LOGO
+   ========================================= */
+
+/* =========================================
+   FEMALE BOOKED SEAT
+   ========================================= */
+
+/* =========================
+   FEMALE BOOKED SEAT
+   MILD PINK
+========================= */
+
+.seat.booked.female-passenger {
+    background: #ce557a!important;
+    border-color: #e17a99!important;
+}
+
+.seat.seater.booked.female-passenger::before {
+    border-color: #dd6c8e!important;
+}
+
+.seat.seater.booked.female-passenger::after {
+    border-color: #dd849f !important;
+}
+
+.seat.sleeper.booked.female-passenger::after {
+    background: #cd748f !important;
+    border-color: #ed8eab!important;
+}
+
+.seat.booked.female-passenger .seat-number {
+    color: #ce557a !important;
+}

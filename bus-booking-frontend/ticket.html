@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Booking Confirmed - On Time Travels</title>
+
+    <link rel="stylesheet" href="ticket.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="brand">
+        <div class="brand-logo">OTT</div>
+
+        <div class="brand-name">
+            ON TIME TRAVELS
+        </div>
+    </div>
+
+    <button
+        type="button"
+        id="homeBtn"
+        class="home-btn">
+        ← Home
+    </button>
+
+</header>
+
+
+<main class="page">
+
+    <!-- SUCCESS HEADER -->
+
+    <section class="success-section">
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+        <span>BOOKING CONFIRMED</span>
+
+        <h1>
+            Your ticket is confirmed
+        </h1>
+
+        <p>
+            Your payment was successful and your journey has been booked.
+        </p>
+
+    </section>
+
+
+    <!-- TICKET -->
+
+    <section
+        id="ticket"
+        class="ticket-card">
+
+
+        <!-- TICKET HEADER -->
+
+        <div class="ticket-header">
+
+            <div>
+                <span>ON TIME TRAVELS</span>
+
+                <h2>
+                    E-TICKET
+                </h2>
+            </div>
+
+            <div class="booking-reference">
+
+                <small>
+                    BOOKING REFERENCE
+                </small>
+
+                <strong id="bookingReference">
+                    —
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- JOURNEY -->
+
+        <div class="journey-section">
+
+            <div class="location">
+
+                <small>
+                    FROM
+                </small>
+
+                <strong id="source">
+                    —
+                </strong>
+
+                <span id="departureTime">
+                    —
+                </span>
+
+            </div>
+
+
+            <div class="journey-line">
+
+                <span>
+                    ●
+                </span>
+
+                <div></div>
+
+                <span>
+                    ●
+                </span>
+
+            </div>
+
+
+            <div class="location destination">
+
+                <small>
+                    TO
+                </small>
+
+                <strong id="destination">
+                    —
+                </strong>
+
+                <span id="arrivalTime">
+                    —
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- TRAVEL DETAILS -->
+
+        <div class="details-grid">
+
+            <div class="detail">
+
+                <span>
+                    TRAVEL DATE
+                </span>
+
+                <strong id="travelDate">
+                    —
+                </strong>
+
+            </div>
+
+
+            <div class="detail">
+
+                <span>
+                    BUS
+                </span>
+
+                <strong id="busNumber">
+                    —
+                </strong>
+
+            </div>
+
+
+            <div class="detail">
+
+                <span>
+                    BUS TYPE
+                </span>
+
+                <strong id="busType">
+                    —
+                </strong>
+
+            </div>
+
+
+            <div class="detail">
+
+                <span>
+                    BOOKING STATUS
+                </span>
+
+                <strong
+                    id="bookingStatus"
+                    class="status">
+                    CONFIRMED
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- PASSENGERS -->
+
+        <div class="passenger-section">
+
+            <div class="section-title">
+
+                <span>
+                    PASSENGER DETAILS
+                </span>
+
+                <h3>
+                    Travellers
+                </h3>
+
+            </div>
+
+
+            <div
+                id="passengerList"
+                class="passenger-list">
+
+            </div>
+
+        </div>
+
+
+        <!-- FARE -->
+
+        <div class="fare-section">
+
+            <div>
+
+                <span>
+                    SELECTED SEATS
+                </span>
+
+                <strong id="seatNumbers">
+                    —
+                </strong>
+
+            </div>
+
+
+            <div class="total-fare">
+
+                <span>
+                    TOTAL PAID
+                </span>
+
+                <strong id="totalAmount">
+                    ₹0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- PAYMENT -->
+
+        <div class="payment-section">
+
+            <div>
+
+                <span>
+                    PAYMENT STATUS
+                </span>
+
+                <strong class="payment-success">
+                    ✓ PAID
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    PAYMENT REFERENCE
+                </span>
+
+                <strong id="paymentReference">
+                    —
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- CANCELLATION INFO -->
+
+        <div class="cancellation-note">
+
+            <strong>
+                Cancellation policy
+            </strong>
+
+            <p>
+                Cancellation is allowed until 8 hours before departure.
+                A 10% cancellation fee will be deducted from the refund amount.
+            </p>
+
+        </div>
+
+
+        <!-- TICKET FOOTER -->
+
+        <div class="ticket-footer">
+
+            <p>
+                Please carry this ticket during your journey.
+            </p>
+
+            <p>
+                Thank you for travelling with
+                <strong>On Time Travels</strong>.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ACTIONS -->
+
+    <section class="ticket-actions">
+
+        <button
+            type="button"
+            id="downloadBtn"
+            class="primary-btn">
+
+            Download Ticket
+
+        </button>
+
+
+        <button
+            type="button"
+            id="cancelBtn"
+            class="cancel-btn">
+
+            Cancel Booking
+
+        </button>
+
+    </section>
+
+</main>
+
+
+<!-- POPUP -->
+
+<div
+    id="popup"
+    class="popup">
+
+    <span id="popupMessage">
+    </span>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="ticket.js"></script>
+
+</body>
+
+</html>

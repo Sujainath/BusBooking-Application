@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | On Time Travels</title>
+
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <main class="login-page">
+
+        <!-- Left Branding Section -->
+        <section class="login-brand">
+
+            <div class="brand-content">
+
+                <div class="brand-logo">
+                    OTT
+                </div>
+
+                <p class="brand-name">
+                    ON TIME TRAVELS
+                </p>
+
+                <h1>
+                    Your journey<br>
+                    starts here.
+                </h1>
+
+                <p class="brand-description">
+                    Book comfortable AC sleeper and seater buses
+                    across South India.
+                </p>
+
+              
+
+            </div>
+
+        </section>
+
+
+        <!-- Login Section -->
+        <section class="login-section">
+
+            <div class="login-card">
+
+                <div class="login-header">
+
+                    <p class="welcome-text">
+                        Welcome back
+                    </p>
+
+                    <h2>
+                        Sign in to continue
+                    </h2>
+
+                    <p>
+                        Manage your bookings and travel with us.
+                    </p>
+
+                </div>
+
+
+                <form id="loginForm">
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email address
+                        </label>
+
+                        <input type="email" id="email" placeholder="Enter your email" required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <div class="password-label">
+
+                            <label for="password">
+                                Password
+                            </label>
+
+                           
+
+                        </div>
+
+                        <input type="password" id="password" placeholder="Enter your password" required>
+
+                    </div>
+
+
+                    <button type="submit" class="login-btn">
+
+                        Sign In
+
+                    </button>
+
+                </form>
+
+
+                <div class="divider">
+                    <span>OR</span>
+                </div>
+
+
+                <p class="register-text">
+
+                    Don't have an account?
+
+                    <a href="register.html">
+                        Create account
+                    </a>
+
+                </p>
+                <div class="admin-login-section">
+
+                    <div class="divider">
+                        <span>OR</span>
+                    </div>
+
+                    <button type="button" id="adminLoginLink" class="admin-login-btn">
+
+                        Admin Login
+
+                    </button>
+                    
+<div id="adminLoginModal" class="admin-modal">
+    <div class="admin-modal-card">
+        <button type="button" id="closeAdminModal"
+                class="admin-close" aria-label="Close">&times;</button>
+
+        <div class="admin-logo">OTT</div>
+
+        <p class="admin-eyebrow">ON TIME TRAVELS</p>
+        <h2>Admin Login</h2>
+        <p class="admin-description">
+            Sign in to access the administration dashboard.
+        </p>
+
+        <form id="adminLoginForm">
+            <div class="admin-field">
+                <label for="adminName">Admin Name</label>
+                <input
+                    type="text"
+                    id="adminName"
+                    placeholder="Enter admin name"
+                    autocomplete="username"
+                    required>
+            </div>
+
+            <div class="admin-field">
+                <label for="adminKey">Admin Key</label>
+                <input
+                    type="password"
+                    id="adminKey"
+                    placeholder="Enter 4-digit admin key"
+                    inputmode="numeric"
+                    pattern="[0-9]+"
+                    autocomplete="off"
+                    required>
+            </div>
+
+            <p id="adminLoginError" class="admin-error"></p>
+
+            <button type="submit" id="adminSubmitButton"
+                    class="admin-submit">
+                Login to Dashboard
+            </button>
+        </form>
+
+        <p class="admin-secure-note">Restricted administrator access</p>
+    </div>
+</div>
+
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- Popup Notification -->
+    <div id="popup" class="popup">
+
+        <div class="popup-content">
+
+            <span id="popupMessage"></span>
+
+            <button type="button" id="popupClose">
+
+                ×
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="login.js"></script>
+
+</body>
+
+</html>

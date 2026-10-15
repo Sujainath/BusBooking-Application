@@ -1,6 +1,5 @@
 
-const API_BASE_URL = "http://localhost:8080";
-
+const API_URL = "https://on-time-travels.onrender.com";
 /* =========================================
    ELEMENTS
 ========================================= */

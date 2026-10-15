@@ -193,7 +193,7 @@ registerForm.addEventListener(
 
             const response =
                 await fetch(
-                    "http://localhost:8080/api/auth/register",
+                  "https://on-time-travels.onrender.com/api/auth/register",
                     {
                         method: "POST",
 

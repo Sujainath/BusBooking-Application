@@ -1,3 +1,5 @@
+const API_URL = "https://on-time-travels.onrender.com";
+
 const registerForm =
     document.getElementById("registerForm");
 
@@ -190,44 +192,22 @@ registerForm.addEventListener(
             // ==========================
             // BACKEND REQUEST
             // ==========================
-
-            const response =
-                await fetch(
-                    "http://localhost:8080/api/auth/register",
-                    {
-                        method: "POST",
-
-                        headers: {
-                            "Content-Type":
-                                "application/json"
-                        },
-
-                        body: JSON.stringify({
-
-                            fullName:
-                                fullName,
-
-                            email:
-                                email,
-
-                            phone:
-                                phone,
-
-                            /*
-                             * Backend User.Gender enum:
-                             * MALE / FEMALE
-                             */
-
-                            gender:
-                                gender.toUpperCase(),
-
-                            password:
-                                password
-
-                        })
-                    }
-                );
-
+const response = await fetch(
+    "https://on-time-travels.onrender.com/api/auth/register",
+    {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            fullName,
+            email,
+            phone,
+            gender: gender.toUpperCase(),
+            password
+        })
+    }
+);
 
             // ==========================
             // IMPORTANT

@@ -1,4 +1,4 @@
-const API_URL = "https://on-time-travels.onrender.com";
+const API_BASE_URL = "https://on-time-travels.onrender.com";
 
 const fromCity = document.getElementById("fromCity");
 const toCity = document.getElementById("toCity");

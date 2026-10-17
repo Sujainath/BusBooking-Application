@@ -1,4 +1,4 @@
-const API_URL = "https://on-time-travels.onrender.com";
+const API_BASE_URL = "https://on-time-travels.onrender.com";
 
 const authToken = localStorage.getItem("authToken");
 const userRole = localStorage.getItem("userRole");

@@ -1,5 +1,5 @@
 
-const API_URL = "https://on-time-travels.onrender.com";
+const API_BASE_URL = "https://on-time-travels.onrender.com";
 /* =========================================
    ELEMENTS
 ========================================= */
@@ -62,7 +62,7 @@ if (loginForm) {
 
         try {
             const response = await fetch(
-                `${API_BASE_URL}/api/auth/login`,
+                 "https://on-time-travels.onrender.com/api/auth/login",
                 {
                     method: "POST",
                     headers: {

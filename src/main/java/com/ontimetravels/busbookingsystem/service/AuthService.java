@@ -14,6 +14,9 @@ import java.util.Locale;
 @Service
 public class AuthService {
 
+    private static final String ADMIN_NAME = "sujainath";
+    private static final String ADMIN_KEY_ENV = "ADMIN_KEY";
+
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
     private final JwtService jwtService;
@@ -72,8 +75,9 @@ public class AuthService {
 
     public LoginResponse adminLogin(AdminLoginRequest request) {
 
-        if (request.getAdminName() == null ||
-                !"sujainath".equals(
+        if (request == null
+                || request.getAdminName() == null
+                || !ADMIN_NAME.equals(
                         request.getAdminName()
                                 .trim()
                                 .toLowerCase(Locale.ROOT))) {
@@ -83,43 +87,30 @@ public class AuthService {
             );
         }
 
-        if (!"2803".equals(request.getAdminKey())) {
+        String expectedKey = System.getenv(ADMIN_KEY_ENV);
+
+        if (expectedKey == null
+                || expectedKey.isBlank()
+                || request.getAdminKey() == null
+                || !expectedKey.equals(request.getAdminKey())) {
+
             throw new IllegalArgumentException(
                     "Invalid admin key"
             );
         }
 
-        User user = userRepository
-                .findByEmail("arun2026@gmail.com")
-                .orElseThrow(() ->
-                        new IllegalArgumentException(
-                                "Admin account not found"
-                        ));
-
-        if (!user.isActive()) {
-            throw new IllegalArgumentException(
-                    "Admin account is inactive"
-            );
-        }
-
-        if (user.getRole() != User.Role.ADMIN) {
-            throw new IllegalArgumentException(
-                    "Access denied. Admin account required"
-            );
-        }
-
         String token = jwtService.generateToken(
-                user.getId(),
-                user.getEmail(),
-                user.getRole().name()
+                0L,
+                "admin",
+                User.Role.ADMIN.name()
         );
 
         return new LoginResponse(
                 token,
-                user.getId(),
-                user.getFullName(),
-                user.getEmail(),
-                user.getRole().name()
+                0L,
+                "Admin",
+                "admin",
+                User.Role.ADMIN.name()
         );
     }
 

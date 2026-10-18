@@ -867,3 +867,74 @@ body {
         padding: 28px 22px;
     }
 }
+
+.hosting-notice-overlay {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 99999;
+}
+
+.hosting-notice-overlay.show {
+    display: flex;
+}
+
+.hosting-notice-modal {
+    width: 100%;
+    max-width: 420px;
+    padding: 30px 26px;
+    background: #fff;
+    color: #292929;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3);
+    animation: hostingNoticeAppear 0.25s ease-out;
+}
+
+.hosting-notice-icon {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.hosting-notice-modal h2 {
+    font-size: 23px;
+    margin: 0 0 14px;
+}
+
+.hosting-notice-modal p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 24px;
+}
+
+#hostingNoticeButton {
+    width: 100%;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #174ea6;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#hostingNoticeButton:hover {
+    background: #123d83;
+}
+
+@keyframes hostingNoticeAppear {
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.97);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}

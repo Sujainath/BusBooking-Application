@@ -386,3 +386,20 @@ if (adminLoginForm) {
         }
     );
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const notice = document.getElementById("hostingNotice");
+    const gotItButton = document.getElementById("hostingNoticeButton");
+
+    if (!notice || !gotItButton) return;
+
+    // Show popup 2 seconds after the website loads.
+    setTimeout(function () {
+        notice.classList.add("show");
+    }, 2000);
+
+    // Close popup when Got it is clicked.
+    gotItButton.addEventListener("click", function () {
+        notice.classList.remove("show");
+    });
+});
